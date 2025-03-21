@@ -1,0 +1,99 @@
+@import "../../styles/responsive.scss";
+@import "../../styles/variables.scss";
+
+.topBox {
+    overflow: hidden;
+    position: relative;
+    height: 650px; // 固定容器高度
+
+
+    h1 {
+        margin-bottom: 20px;
+
+        @include xxl {
+            font-size: 24px;
+        }
+    }
+
+    .list {
+        overflow: hidden;
+        height: 100%;
+
+
+        .listItem {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+
+            height: 40px; // 固定项目高度
+
+
+            &:hover {
+                transform: translateY(-2px);
+                background-color: $soft-bg;
+            }
+
+            .ranking {
+                display: flex;
+                gap: 5px;
+
+
+                .rankingTexts {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    @include xxl {
+                        gap: 7px;
+                    }
+
+                    .rank {
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: green;
+
+
+                    }
+
+                    .name {
+                        font-size: 16px;
+                        font-weight: 500;
+
+                        @include xxl {
+                            font-size: 14px;
+                        }
+
+
+                    }
+
+
+                }
+            }
+
+            .amount {
+                font-size: 12px;
+                font-weight: 500;
+                color: gray;
+
+                @include xxl {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(5px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}

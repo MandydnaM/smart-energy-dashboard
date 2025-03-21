@@ -1,0 +1,76 @@
+@import "../../styles/responsive.scss";
+
+.conversionBox {
+    h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+
+        @include xxl {
+            font-size: 24px;
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+
+        .type {
+            p {
+                color: gray;
+                margin-bottom: 20px;
+            }
+
+            .pic {
+                padding: 20px;
+                background-color: #7cba59;
+                border-radius: 50%;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            }
+
+            .text {
+                margin-top: 20px;
+                text-align: center;
+                font-size: 12px;
+
+                span {
+                    font-size: 26px;
+                    color: #7cba59;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .type2 {
+            p {
+                color: gray;
+                margin-bottom: 20px;
+            }
+
+            .pic {
+                padding: 20px;
+                background-color: #efb336;
+                border-radius: 50%;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+            }
+
+            .text {
+                margin-top: 20px;
+                text-align: center;
+                font-size: 12px;
+
+                span {
+                    font-size: 26px;
+                    color: #efb336;
+                    font-weight: 700;
+                }
+            }
+        }
+
+
+
+    }
+}

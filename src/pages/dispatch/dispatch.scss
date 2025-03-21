@@ -1,0 +1,48 @@
+.MuiBox-root {
+
+
+    .info {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        div {
+            display: flex;
+            gap: 10px;
+        }
+    }
+
+    .change {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .changeContent {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+
+        .changeRow {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: gray;
+            margin-bottom: 20px;
+        }
+
+
+    }
+
+    button {
+        margin-top: 10px;
+        margin-left: 50%;
+        transform: translateX(-60px);
+        width: 120px;
+        height: 30px;
+    }
+}

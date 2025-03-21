@@ -1,0 +1,40 @@
+// repairmap.scss
+
+.spark-marker {
+    // animation: pulse 1.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.sparkle-aura {
+    animation: aura 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    stroke: rgba(255, 87, 34, 0.3);
+}
+
+// @keyframes pulse {
+
+//     0%,
+//     100% {
+//         transform: scale(1);
+//     }
+
+//     50% {
+//         transform: scale(1.01);
+//     }
+// }
+
+@keyframes aura {
+
+    0%,
+    100% {
+        stroke-opacity: 0.3;
+    }
+
+    50% {
+        stroke-opacity: 0.8;
+    }
+}
+
+// 添加滤镜效果
+.sparkle-filter {
+    filter: url(#sparkle-filter);
+}
