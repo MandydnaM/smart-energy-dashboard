@@ -70,6 +70,7 @@ function Dispatch() {
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
+        event.preventDefault;
     };
 
     return (

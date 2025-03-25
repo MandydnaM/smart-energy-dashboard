@@ -5,7 +5,6 @@ import Devices from "./pages/devices/Devices"
 import Region from "./pages/region/Region"
 import Energy from "./pages/energy/Energy"
 import Dispatch from "./pages/dispatch/Dispatch"
-import Tracking from "./pages/tracking/Tracking"
 import User from "./pages/user/User"
 import Product from "./pages/product/Product"
 import Navbar from "./components/navbar/Navbar"
@@ -59,7 +58,7 @@ function App() {
           path: "/users",
           element: <Users />
         }, {
-          path: "/Devices",
+          path: "/devices",
           element: <Devices />
         }, {
           path: "/users/:id",
@@ -79,11 +78,13 @@ function App() {
           element: <Dispatch />
         }, {
           path: "/tracking",
-          element: <Tracking />
+          element: <Home />
         },
       ]
     },
-  ])
+  ],
+    { basename: "/smart-energy-dashboard" }
+  )
 
 
   return <RouterProvider router={router} />;

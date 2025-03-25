@@ -1,10 +1,11 @@
 import './Devices.scss'
+import { devices } from "../../data";
 import DataTable from "../../components/dataTable/DataTable"
-import Add from '../../components/add/add'
+// import Add from '../../components/add/add'
 // import { products } from "../../data";
 import { GridColDef } from "@mui/x-data-grid";
-import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+// import { useState } from "react";
+// import { useQuery } from "@tanstack/react-query";
 
 const columns: GridColDef[] = [
     { field: "id", headerName: "ID", width: 90 },
@@ -17,70 +18,72 @@ const columns: GridColDef[] = [
         },
     },
     {
-        field: "title",
+        field: "deviceNumber",
         type: "string",
-        headerName: "Title",
+        headerName: "deviceNumber",
         width: 250,
     },
     {
-        field: "color",
+        field: "type",
         type: "string",
-        headerName: "Color",
+        headerName: "type",
         width: 150,
     },
     {
-        field: "price",
+        field: "status",
         type: "string",
-        headerName: "Price",
+        headerName: "status",
         width: 200,
     },
     {
-        field: "producer",
-        headerName: "Producer",
+        field: "location",
+        headerName: "location",
         type: "string",
         width: 200,
     },
     {
-        field: "createdAt",
-        headerName: "Created At",
+        field: "manufacturer",
+        headerName: "manufacturer",
         width: 200,
         type: "string",
     },
     {
-        field: "inStock",
-        headerName: "In Stock",
+        field: "installationDate",
+        headerName: "In installation Date",
         width: 150,
         type: "boolean",
     },
 ];
 
 function Devices() {
-    const [open, setOpen] = useState(false);
+    // const [open, setOpen] = useState(false);
 
     // TEST THE API
 
-    const { isLoading, data } = useQuery({
-        queryKey: ["allproducts"],
-        queryFn: () =>
-            fetch("http://localhost:8800/api/products").then(
-                (res) => res.json()
-            ),
-    });
+    // const { isLoading, data } = useQuery({
+    //     queryKey: ["allproducts"],
+    //     queryFn: () =>
+    //         fetch("http://localhost:8800/api/products").then(
+    //             (res) => res.json()
+    //         ),
+    // });
     return (
         <div className='devices'>
             <div className="info">
-                <h1>Products</h1>
-                <button onClick={() => { setOpen(true) }}>Add New Products</button>
+                <h1>Devices</h1>
+                <button
+                // onClick={() => { setOpen(true) }}
+                >Add New Devices</button>
             </div>
-            {/* <DataTable slug="products" columns={columns} rows={products} /> */}
+            <DataTable slug="devices" columns={columns} rows={devices} />
             {/* TEST THE API */}
 
-            {isLoading ? (
+            {/* {isLoading ? (
                 "Loading..."
             ) : (
                 <DataTable slug="products" columns={columns} rows={data} />
             )}
-            {open && <Add slug="products" columns={columns} setOpen={setOpen} />}
+            {open && <Add slug="products" columns={columns} setOpen={setOpen} />} */}
         </div>
     )
 }

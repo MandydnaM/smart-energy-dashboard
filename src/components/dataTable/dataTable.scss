@@ -1,26 +1,26 @@
-@import "../../styles/responsive.scss";
+@use "../../styles/responsive.scss";
 
 .dataTable {
     margin: 0 auto;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
 
-    @include xxl {
+    @include responsive.xxl {
         width: 1000px;
     }
 
-    @include xl {
+    @include responsive.xl {
         width: 850px;
     }
 
-    @include lg {
+    @include responsive.lg {
         width: 800px;
     }
 
-    @include md {
+    @include responsive.md {
         width: 600px;
     }
 
-    @include sm {
+    @include responsive.sm {
         width: 400px;
     }
 

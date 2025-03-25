@@ -54,14 +54,14 @@ function ChartBox() {
                     <img src="device2.svg" alt="" />
                     <div className="text">
                         <p>Devices</p>
-                        {singleRegion ? <span>{singleRegion.devices}</span> : <span>N/A</span>}
+                        {singleRegion ? <span>{singleRegion.devices}</span> : <span>--</span>}
                     </div>
                 </div>
                 <div className="box">
                     <img src="measurement.svg" alt="" />
                     <div className="text">
                         <p>Testpoints</p>
-                        {singleRegion ? <span>{singleRegion.measurementPoints}</span> : <span>N/A</span>}
+                        {singleRegion ? <span>{singleRegion.measurementPoints}</span> : <span>--</span>}
                     </div>
                 </div>
             </div>

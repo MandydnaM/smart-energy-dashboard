@@ -1,10 +1,11 @@
 import './region.scss'
 import DataTable from "../../components/dataTable/DataTable"
-import Add from '../../components/add/add'
+// import Add from '../../components/add/add'
+// import { useQuery } from "@tanstack/react-query";
 import { regions } from "../../data";
 import { GridColDef } from "@mui/x-data-grid";
-import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+// import { useState } from "react";
+
 
 const columns: GridColDef[] = [
     { field: "id", headerName: "ID", width: 90 },
@@ -42,7 +43,7 @@ const columns: GridColDef[] = [
 
 
 function Region() {
-    const [open, setOpen] = useState(false)
+    // const [open, setOpen] = useState(false)
 
     // TEST THE API
 
@@ -57,7 +58,9 @@ function Region() {
         <div className='regions'>
             <div className="info">
                 <h1>Regions</h1>
-                <button onClick={() => { setOpen(true) }}>Add New Region</button>
+                <button
+                // onClick={() => { setOpen(true) }}
+                >Add New Region</button>
             </div>
             <DataTable slug="users" columns={columns} rows={regions} />
             {/* TEST THE API */}

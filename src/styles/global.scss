@@ -1,5 +1,5 @@
-@import "./variables.scss";
-@import "./responsive.scss";
+@use "variables.scss";
+@use "responsive.scss";
 
 * {
   margin: 0;
@@ -19,8 +19,8 @@ a {
 
 .main {
   font-family: "Inter", sans-serif;
-  background-color: $main-bg;
-  color: $main-color;
+  background-color: variables.$main-bg;
+  color: variables.$main-color;
   background-color: #f6fcf2;
 }
 
@@ -31,7 +31,7 @@ a {
 
 .menuContainer {
 
-  @include lg {
+  @include responsive.lg {
     width: max-content;
   }
 }
@@ -43,7 +43,7 @@ a {
 
 
 
-  @include lg {
+  @include responsive.lg {
     margin-left: 110px;
   }
 }

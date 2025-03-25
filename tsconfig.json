@@ -2,6 +2,14 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
+    "types": [
+      "vite/client",
+    ],
+    "paths": {
+      "*.svg": [
+        "./src/vite-env.d.ts"
+      ]
+    },
     "lib": [
       "ES2020",
       "DOM",
@@ -27,7 +35,8 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "src"
+    "src",
+    "vite-env.d.ts"
   ],
   "references": [
     {

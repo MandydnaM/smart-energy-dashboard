@@ -1,5 +1,5 @@
-@import "../../styles/responsive.scss";
-@import "../../styles/variables.scss";
+@use "../../styles/responsive.scss";
+@use "../../styles/variables.scss";
 
 .regionInfo {
     h1 {
@@ -39,7 +39,7 @@
 
             &:hover {
                 transform: translateY(-2px);
-                background-color: $soft-bg;
+                background-color: variables.$soft-bg;
             }
 
             .text {
@@ -52,7 +52,7 @@
                 span {
                     font-weight: 700;
                     font-size: 18px;
-                    color: red;
+                    color: black;
                 }
             }
         }

@@ -1,5 +1,5 @@
-@import "../../styles/variables.scss";
-@import "../../styles/responsive.scss";
+@use "../../styles/variables.scss";
+@use "../../styles/responsive.scss";
 
 .home {
     display: grid;
@@ -8,19 +8,19 @@
     grid-auto-rows: minmax(180px, 350px);
     grid-auto-flow: dense;
 
-    @include xl {
+    @include responsive.xl {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    @include lg {
+    @include responsive.lg {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @include md {
+    @include responsive.md {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    @include sm {
+    @include responsive.sm {
         grid-auto-rows: minmax(120px, auto);
     }
 
@@ -51,11 +51,11 @@
         grid-column: span 1;
         grid-row: span 2;
 
-        @include xl {
+        @include responsive.xl {
             display: none;
         }
 
-        @include lg {
+        @include responsive.lg {
             display: block;
         }
     }
@@ -64,17 +64,17 @@
         grid-column: span 3;
         grid-row: span 1;
 
-        @include xl {
+        @include responsive.xl {
             grid-column: span 2;
         }
     }
 
     .box8 {
-        @include xl {
+        @include responsive.xl {
             grid-column: span 1;
         }
 
-        @include lg {
+        @include responsive.lg {
             display: none;
         }
 

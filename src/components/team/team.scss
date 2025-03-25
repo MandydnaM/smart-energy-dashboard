@@ -1,0 +1,70 @@
+@use "../../styles/responsive.scss";
+
+.team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 95%;
+        height: 170px;
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 25%;
+            padding: 9px;
+            background-color: #7cba59;
+        }
+
+        .team-title {
+            text-align: center;
+
+            p {
+                font-size: 16px;
+                color: gray;
+            }
+
+            h1 {
+                font-size: 20px;
+                margin: 5px;
+
+                @include responsive.md {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .progress {
+            width: 100%;
+
+            .pro-title {
+                display: flex;
+                justify-content: space-between;
+                margin: 10px 0;
+
+                @include responsive.md {
+                    margin: 8px 0;
+                }
+            }
+
+            .bar {
+                width: 100%;
+                height: 5px;
+                background-color: rgb(211, 211, 211);
+
+                div {
+                    height: 5px;
+                    background-color: orange;
+                }
+            }
+        }
+    }
+}

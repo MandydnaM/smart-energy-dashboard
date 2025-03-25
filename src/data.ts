@@ -12,24 +12,6 @@ export const menu = [
         ],
     }, {
         id: 2,
-        title: "Maintenance",
-        listItems: [
-            {
-                id: 1,
-                title: "Dispatch",
-                url: "/dispatch",
-                icon: "icon-dispatche.svg",
-            },
-            {
-                id: 2,
-                title: "Tracking",
-                url: "/tracking",
-                icon: "icon-process.svg",
-            },
-        ],
-    },
-    {
-        id: 3,
         title: "lists",
         listItems: [
             {
@@ -41,7 +23,7 @@ export const menu = [
             {
                 id: 2,
                 title: "Devices",
-                url: "/Devices",
+                url: "/devices",
                 icon: "icon-value-set.svg",
             },
             {
@@ -58,6 +40,24 @@ export const menu = [
             },
         ],
     }, {
+        id: 3,
+        title: "Maintenance",
+        listItems: [
+            {
+                id: 1,
+                title: "Dispatch",
+                url: "/dispatch",
+                icon: "icon-dispatche.svg",
+            },
+            {
+                id: 2,
+                title: "Tracking",
+                url: "/",
+                icon: "icon-process.svg",
+            },
+        ],
+    },
+    {
         id: 4,
         title: "alerts",
         listItems: [
@@ -706,7 +706,7 @@ export const regions = [
 
 
 
-export const equipments = [
+export const devices = [
     {
         "id": "EQ-1001",
         "deviceNumber": "EQC-2301",

@@ -1,10 +1,10 @@
 import './energy.scss'
 import DataTable from "../../components/dataTable/DataTable"
-import Add from '../../components/add/add'
 import { energyTypes } from "../../data";
 import { GridColDef } from "@mui/x-data-grid";
-import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+// import { useState } from "react";
+// import Add from '../../components/add/add'
+// import { useQuery } from "@tanstack/react-query";
 
 const columns: GridColDef[] = [
     { field: "id", headerName: "ID", width: 90 },
@@ -41,7 +41,7 @@ const columns: GridColDef[] = [
 ];
 
 function Energy() {
-    const [open, setOpen] = useState(false);
+    // const [open, setOpen] = useState(false);
 
     // TEST THE API
 
@@ -56,7 +56,9 @@ function Energy() {
         <div className='energy'>
             <div className="info">
                 <h1>Energy</h1>
-                <button onClick={() => { setOpen(true) }}>Add New Energy</button>
+                <button
+                // onClick={() => { setOpen(true) }}
+                >Add New Energy</button>
             </div>
             <DataTable slug="energyTypes" columns={columns} rows={energyTypes} />
             {/* TEST THE API */}
