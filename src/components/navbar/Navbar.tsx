@@ -1,4 +1,5 @@
 import './navbar.scss'
+import Tooltip from '@mui/material/Tooltip';
 
 function Navbar() {
     return (
@@ -8,16 +9,23 @@ function Navbar() {
                 <span>Smart Energy Dashboard</span>
             </div>
             <div className="icons">
-                <img src="icon-system-messages.svg" alt="" className="icon" />
+                <Tooltip title="chat">
+                    <img src="icon-system-messages.svg" alt="" className="icon" />
+                </Tooltip>
                 <div className="notification">
-                    <img src="/notifications.svg" alt="icon" />
+                    <Tooltip title="notifications">
+                        <img src="/notifications.svg" alt="icon" />
+                    </Tooltip>
+
                     <span>1</span>
                 </div>
                 <div className="user">
                     <img src="user.jpg" alt="" />
                     <span>admin</span>
                 </div>
-                <img src="settings.svg" alt="" />
+                <Tooltip title="settings">
+                    <img src="settings.svg" alt="" />
+                </Tooltip>
             </div>
         </div>
     )

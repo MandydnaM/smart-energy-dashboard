@@ -1,5 +1,8 @@
 import './singel.scss'
-import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { RadialBarChart, RadialBar, Legend, ResponsiveContainer } from 'recharts';
+
+
+
 
 type Props = {
     id: number;
@@ -13,7 +16,36 @@ type Props = {
     activities?: { time: string; text: string }[];
 };
 
+const data = [
+    {
+        name: 'day',
+        uv: 13,
+        pv: 6,
+        fill: '#8884d8',
+    },
+    {
+        name: 'week',
+        uv: 34,
+        pv: 26,
+        fill: '#d0ed57',
+    },
+    {
+        name: 'month',
+        uv: 100,
+        pv: 83,
+        fill: '#ffc658',
+    },
+];
+
+const style = {
+    top: '50%',
+    right: 0,
+    transform: 'translate(0, -50%)',
+    lineHeight: '24px',
+};
+
 function Singel(props: Props) {
+
     return (
         <div className='singel'>
             <div className="view">
@@ -33,31 +65,22 @@ function Singel(props: Props) {
 
                     </div>
                 </div>
-                <hr />
+                <h1>Progress</h1>
                 {props.chart && <div className="chart">
-                    <ResponsiveContainer width="100%" height="100%">
-                        <LineChart
-                            width={500}
-                            height={300}
-                            data={props.chart.data}
-                            margin={{
-                                top: 5,
-                                right: 30,
-                                left: 20,
-                                bottom: 5,
-                            }}
-                        >
-                            <XAxis dataKey="name" />
-                            <YAxis />
-                            <Tooltip />
-                            <Legend />
-                            {props.chart.dataKeys.map(dataKey => (
-                                <Line type="monotone" dataKey={dataKey.name} stroke={dataKey.color} />
-                            ))}
-
-                        </LineChart>
+                    <ResponsiveContainer width="99%" height="100%">
+                        <RadialBarChart cx="50%" cy="50%" innerRadius="10%" outerRadius="80%" barSize={20} data={data}>
+                            <RadialBar
+                                // minAngle={15}
+                                label={{ position: 'insideStart', fill: '#fff' }}
+                                background
+                                // clockWise
+                                dataKey="uv"
+                            />
+                            <Legend iconSize={10} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
+                        </RadialBarChart>
                     </ResponsiveContainer>
                 </div>}
+
             </div>
             <div className="activities">
                 <h2>Latest tasks</h2>

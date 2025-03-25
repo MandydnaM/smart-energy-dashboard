@@ -459,30 +459,31 @@ export const singleUser = {
     },
     activities: [
         {
-            text: "John Doe purchased Playstation 5 Digital Edition",
-            time: "3 day ago",
+            text: "Analyzed daily energy consumption data and identified efficiency improvements",
+            time: "3 days ago",
         },
         {
-            text: "John Doe added 3 items into their wishlist",
+            text: "Adjusted power distribution settings to optimize energy usage",
             time: "1 week ago",
         },
         {
-            text: "John Doe purchased Sony Bravia KD-32w800",
+            text: "Inspected and reported anomalies in the power grid system",
             time: "2 weeks ago",
         },
         {
-            text: "John Doe reviewed a product",
+            text: "Conducted an audit on renewable energy integration performance",
             time: "1 month ago",
         },
         {
-            text: "John Doe added 1 items into their wishlist",
+            text: "Implemented new energy-saving protocols in the facility",
             time: "1 month ago",
         },
         {
-            text: "John Doe reviewed a product",
+            text: "Presented a report on peak-hour energy demand reduction strategies",
             time: "2 months ago",
         },
     ],
+
 };
 export const singleProduct = {
     id: 1,
